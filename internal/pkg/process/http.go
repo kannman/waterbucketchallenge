@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/kannman/waterbucket/internal/pkg/logger"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/logger"
 
 	"github.com/go-chi/chi"
 	"github.com/pkg/errors"

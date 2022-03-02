@@ -4,7 +4,7 @@ import (
 	"sync"
 
 	"github.com/heptiolabs/healthcheck"
-	"github.com/kannman/waterbucket/internal/pkg/logger"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/logger"
 	"github.com/pkg/errors"
 
 	"github.com/oklog/run"

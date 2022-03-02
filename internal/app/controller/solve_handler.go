@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-chi/render"
 	validation "github.com/go-ozzo/ozzo-validation"
-	"github.com/kannman/waterbucket/internal/app/waterjug"
+	"github.com/kannman/waterbucketchallenge/internal/app/waterjug"
 )
 
 // FindSolutionHandler godoc

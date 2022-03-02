@@ -5,7 +5,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/kannman/waterbucket/internal/pkg/logger"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/logger"
 )
 
 // performs interrupt and graceful shutdown for all actors.

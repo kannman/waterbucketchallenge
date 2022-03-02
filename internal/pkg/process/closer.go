@@ -3,7 +3,7 @@ package process
 import (
 	"sync"
 
-	"github.com/kannman/waterbucket/internal/pkg/logger"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/logger"
 )
 
 type closerRunner struct {

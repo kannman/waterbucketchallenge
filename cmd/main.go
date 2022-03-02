@@ -8,10 +8,10 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/render"
-	"github.com/kannman/waterbucket/internal/app/controller"
-	"github.com/kannman/waterbucket/internal/pkg/logger"
-	"github.com/kannman/waterbucket/internal/pkg/process"
-	"github.com/kannman/waterbucket/internal/pkg/tracing"
+	"github.com/kannman/waterbucketchallenge/internal/app/controller"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/logger"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/process"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/tracing"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	httpswagger "github.com/swaggo/http-swagger"
@@ -19,7 +19,7 @@ import (
 	"go.uber.org/zap/zapcore"
 
 	// import docs
-	_ "github.com/kannman/waterbucket/api"
+	_ "github.com/kannman/waterbucketchallenge/api"
 )
 
 type Config struct {

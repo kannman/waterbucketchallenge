@@ -1,8 +1,8 @@
 package process
 
 import (
-	"github.com/kannman/waterbucket/internal/pkg/logger"
-	"github.com/kannman/waterbucket/internal/pkg/tracing"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/logger"
+	"github.com/kannman/waterbucketchallenge/internal/pkg/tracing"
 	"github.com/pkg/errors"
 )
 
