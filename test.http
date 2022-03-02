@@ -1,0 +1,15 @@
+### no solution
+POST http://localhost:8000/v1/search-solution
+
+{"x":2, "y":10, "z":44}
+
+### has solution
+POST http://localhost:8000/v1/search-solution
+
+{"x":2, "y":10, "z":4}
+
+### bad request
+POST http://localhost:8000/v1/search-solution
+
+{"x":2, "y":-10, "z":4}
+

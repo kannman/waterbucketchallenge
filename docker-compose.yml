@@ -1,0 +1,27 @@
+version: "3"
+services:
+
+  jaegertracing:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "6831:6831/udp"
+      - "16686:16686"
+
+  waterbucket:
+    build: .
+    container_name: waterbucket
+    environment:
+      - PORT_HTTP=8000
+      - DEBUG_HTTP_PORT=8001
+      - GRACEFUL_SHUTDOWN_TIMEOUT=10s
+      - LOG_LEVEL=debug
+      - JAEGER_SERVICE_NAME=waterbucketchallenge
+      - JAEGER_AGENT_HOST=jaegertracing
+      - JAEGER_AGENT_PORT=6831
+      - JAEGER_SAMPLER_TYPE=const
+      - JAEGER_SAMPLER_PARAM=1
+    ports:
+      - 8000:8000
+      - 8001:8001
+
+
