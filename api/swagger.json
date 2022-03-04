@@ -36,7 +36,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/controller.SolveRequest"
+                            "$ref": "#/definitions/controller.FindSolutionRequest"
                         }
                     }
                 ],
@@ -44,7 +44,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/controller.SolveResponse"
+                            "$ref": "#/definitions/controller.FindSolutionResponse"
                         }
                     },
                     "400": {
@@ -75,7 +75,7 @@
                 }
             }
         },
-        "controller.SolveRequest": {
+        "controller.FindSolutionRequest": {
             "type": "object",
             "properties": {
                 "x": {
@@ -89,7 +89,7 @@
                 }
             }
         },
-        "controller.SolveResponse": {
+        "controller.FindSolutionResponse": {
             "type": "object",
             "properties": {
                 "solved": {

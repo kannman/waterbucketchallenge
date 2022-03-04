@@ -44,7 +44,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/controller.SolveRequest"
+                            "$ref": "#/definitions/controller.FindSolutionRequest"
                         }
                     }
                 ],
@@ -52,7 +52,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/controller.SolveResponse"
+                            "$ref": "#/definitions/controller.FindSolutionResponse"
                         }
                     },
                     "400": {
@@ -83,7 +83,7 @@ const docTemplate = `{
                 }
             }
         },
-        "controller.SolveRequest": {
+        "controller.FindSolutionRequest": {
             "type": "object",
             "properties": {
                 "x": {
@@ -97,7 +97,7 @@ const docTemplate = `{
                 }
             }
         },
-        "controller.SolveResponse": {
+        "controller.FindSolutionResponse": {
             "type": "object",
             "properties": {
                 "solved": {

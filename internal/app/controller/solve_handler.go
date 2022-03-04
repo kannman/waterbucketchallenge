@@ -14,14 +14,14 @@ import (
 // @Description  some description
 // @Accept       json
 // @Produce      json
-// @Param        Buckets body SolveRequest true "Buckets"
-// @Success      200 {object} SolveResponse
+// @Param        Buckets body FindSolutionRequest true "Buckets"
+// @Success      200 {object} FindSolutionResponse
 // @Failure      400 {object} ErrResponse "Bad request"
 // @Router       /v1/search-solution [post]
 func FindSolutionHandler(w http.ResponseWriter, r *http.Request) {
 	var (
-		request  SolveRequest
-		response SolveResponse
+		request  FindSolutionRequest
+		response FindSolutionResponse
 	)
 
 	if err := Bind(r, &request); err != nil {
@@ -41,15 +41,15 @@ func FindSolutionHandler(w http.ResponseWriter, r *http.Request) {
 	render.JSON(w, r, response)
 }
 
-type SolveRequest struct {
+type FindSolutionRequest struct {
 	X int `json:"x"`
 	Y int `json:"y"`
 	Z int `json:"z"`
 }
 
-func (s SolveRequest) Bind(*http.Request) error { return nil }
+func (s FindSolutionRequest) Bind(*http.Request) error { return nil }
 
-func (s *SolveRequest) Validate() error {
+func (s *FindSolutionRequest) Validate() error {
 	return validation.ValidateStruct(s,
 		validation.Field(&s.X, validation.Required, validation.Min(1)),
 		validation.Field(&s.Y, validation.Required, validation.Min(1)),
@@ -57,7 +57,7 @@ func (s *SolveRequest) Validate() error {
 	)
 }
 
-type SolveResponse struct {
+type FindSolutionResponse struct {
 	Steps  []SolveStep `json:"steps"`
 	Solved bool        `json:"solved"`
 }
