@@ -36,6 +36,10 @@ func TestWaterJug(t *testing.T) {
 			},
 		},
 		{
+			x: 10, y: 200000000000, z: 200000000,
+			solved: false,
+		},
+		{
 			x: 2, y: 10, z: 14,
 			solved: false,
 		},

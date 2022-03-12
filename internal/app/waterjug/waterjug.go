@@ -22,10 +22,14 @@ type Node struct {
 }
 
 func SearchSolution(x, y, z int) ([]Node, bool) {
+	const maxVisitedSteps = 10000
 	initialNode := Node{0, 0, ""}
 	paths := [][]Node{{initialNode}}
 	visitedNodes := map[string]Node{}
 	for len(paths) > 0 {
+		if len(visitedNodes) > maxVisitedSteps {
+			break
+		}
 		path := paths[0]
 		paths = paths[1:]
 		lastNode := path[len(path)-1]
